@@ -16,31 +16,33 @@ const Wrapper = styled.header`
   top: 0;
   z-index: 2;
   pointer-events: none;
-
-.col{
-img {
-  cursor: pointer;
-  display: block;
-  width: 200px;
-  height: 60px;
-  margin: 0;
-}
-}
 `;
 
 function Promotions() {
   return (
     <Wrapper>
-      <div style={{ background: "#171a29", padding: "30px 20px", height: "13rem" ,width:"100vw"}}>
-        <div className="container my-3">
-          <h1 style={{ color: "white" }}>The Belgian Waffle Co.</h1>
-          <p style={{ color: "grey" }}>Desserts, Beverages</p>
-        </div>
+      <div style={{ background: "#171a29"}}>
+        <div className="container" style={{display:"flex", padding:"0"}}>
+              <img style={{ width:"250px", height:"150px", padding:"10px"}}
+                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/g4qivuqyviy3la2xqufn"
+                alt="promotion img"
+              />
+            <div className="container" style={{textAlign:"left"}}>
+              <h1 style={{color:"white", margin:"0"}}>The Belgian Waffle Co.</h1>
+              <p style={{color:"grey", margin:"0"}}>Desserts, Beverages</p>
+              <p style={{color:"grey", margin:"0"}}>KIlpauk, Kilpauk</p>
+              <h6 style={{color:"white"}}>★ 4.3 | -- mins | ₹ 200 for two</h6>
+            </div>
+            <div className="container" style={{color:"white", paddingTop:"20px"}}>
+              <h5>OFFER</h5>
+              <p style={{textAlign:"left", paddingLeft:"12rem"}}><i className="fa fa-badge-percent mr-1"></i>40% off up to ₹80 | Use code<br></br>TRYNEW</p>
+            </div>
+        </div> 
       </div>
       <div  className="container" style={{display:"flex",flexDirection:"row",position:"relative",left:"8rem",bottom:"1rem",justifyContent:"space-evenly"}}>
         <form>
           <input type="text" id="search" placeholder="        Search for dishes"/>
-          <i className='fa fa-search mr-1' style={{position:"relative",right:"15.5rem"}}></i>
+          <i className='fa fa-search mr-1' style={{position:"relative",right:"10.5rem"}}></i>
         </form>
         <div style={{border:"1px solid white",backgroundColor:"white",height:"2rem",width:"8rem",position:"relative",right:"9rem"}}>
           <p> <i className='fa fa-leaf mr-1'></i>Pure Veg</p>
@@ -48,13 +50,6 @@ function Promotions() {
         <div style={{border:"1px solid white",backgroundColor:"white",height:"2rem",width:"8rem",position:"relative",right:"17rem"}}>
           <p> <i className='fa fa-heart mr-1'></i>Favourite</p>
         </div>
-      </div>
-      <div className="col">
-        <img
-          style={{ height: "11rem", width: "16rem", position: "relative", bottom: "14rem", left: "4rem" }}
-          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/g4qivuqyviy3la2xqufn"
-          alt="promotion img"
-        />
       </div>
     </Wrapper>
   );
